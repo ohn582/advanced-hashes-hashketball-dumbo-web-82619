@@ -123,7 +123,7 @@ end
 
 
 def num_points_scored(player_name)
-  
+
   game_hash.each do |location, team|
     team[:players].each do |name,data|
         return data[:points] if player_name == name
@@ -192,6 +192,7 @@ def big_shoe_rebounds
   
   game_hash.each do |location, team|
     team[:players].each do |tel, int|
+      
       if int[:shoe] > shoe_size
         shoe_size = int[:shoe]
           player_name = int[:rebounds]
